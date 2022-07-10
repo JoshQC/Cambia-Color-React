@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import namedColors from "color-name-list";
 
 import Input from "../../../layout/Input/Input";
 import Button from "../../../layout/Button/Button";
@@ -15,7 +16,13 @@ const FormularioCambiaColor = () => {
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    setColor(value.toLowerCase());
+
+    const color = namedColors.find(
+      (color) =>
+        color.hex === value || color.name.toLowerCase() === value.toLowerCase()
+    );
+
+    setColor(color);
   };
 
   return (

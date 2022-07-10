@@ -8,7 +8,8 @@ const App = () => {
         height: "100vh",
         width: "100%",
         justifyContent: "center",
-        alignItems:'center'
+        alignItems: "center",
+        backgroundColor: "#f4f1de",
       }}
     >
       <Main />

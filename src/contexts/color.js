@@ -1,12 +1,13 @@
 import { createContext, useState } from "react";
 
 export const ColorContext = createContext({
-  color: null,
-  setColor: () => null,
+  color: {},
+  setColor: () => {},
 });
 
 export const ColorProvider = ({ children }) => {
-  const [color, setColor] = useState(null);
+  const [color, setColor] = useState({});
+
   const value = { color, setColor };
 
   return (
