@@ -17,11 +17,15 @@ const FormularioCambiaColor = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
 
-    const color = namedColors.find(
+    let color = namedColors.find(
       (color) =>
-        color.hex === value || color.name.toLowerCase() === value.toLowerCase()
+        color.hex === value.toLowerCase() ||
+        color.name.toLowerCase() === value.toLowerCase()
     );
 
+    if (!color) color = { name: "Nombre no encontrado", hex: value };
+
+    console.log(namedColors);
     setColor(color);
   };
 

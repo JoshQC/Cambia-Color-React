@@ -11,14 +11,14 @@ const ContenedorColor = ({ color }) => {
         height: "90%",
         width: "99%",
         border: "solid 2px grey",
-        fontSize: "64px",
+        fontSize: "54px",
         color: `${colorFuente}`,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      {name}
+      <span style={{ textAlign: "center" }}>{name}</span>
     </div>
   );
 };
